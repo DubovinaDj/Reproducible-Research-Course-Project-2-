@@ -369,7 +369,7 @@ grid.arrange(gg.injuries,gg.mid,gg.fatalities,
              main=paste("Aggregated human injuries & fatalities for weather events from ",cutOffYear," to ",endYear, sep=""))
 ```
 
-![plot of chunk unnamed-chunk-12](./StormDataAnalysis.file/unnamed-chunk-12.png) 
+![unnamed-chunk-12](unnamed-chunk-12.png) 
 
 The underlying data
 
@@ -406,7 +406,7 @@ ggplot(meltSumEconomicDamage, aes(x=damageSource, y=damage/1000000)) +
   ggtitle(paste("Aggregated property and crop damage for weather events from ",cutOffYear," to ",endYear, sep=""))
 ```
 
-![plot of chunk unnamed-chunk-14](./StormDataAnalysis.file/unnamed-chunk-14.png) 
+![unnamed-chunk-14](unnamed-chunk-14.png) 
 
 The underlying data
 
