@@ -1,3 +1,11 @@
+---
+title: "Reproducible Research"
+author: "Djordje Dubovina"
+date: "3 June 2019"
+output: pdf_document
+---
+
+
 # Analysis of impact, both economic as victims, of different weather events in the USA based on the NOAA Storm Database
 
 
@@ -19,7 +27,7 @@ The #1 & #2 of weather damage sources, resp. Flooding & High Surf and Wind & Sto
 
 ### 3. Data Processing
 ```{r, echo=FALSE, results='hide', warning=FALSE, message=FALSE}
-setwd("C:/Users/djord/Desktop/Courseradatascience/data")
+setwd("C:/Users/djord/Desktop/Curseradatascience/data")
 ```
 
 ##### 3.1. Load libraries
@@ -302,7 +310,7 @@ g.injuries <- ggplot(data=sumHumanDamage, aes(x=damageSource, y=injuries)) +
 # add right chart with fatalities
 g.fatalities <- ggplot(data=sumHumanDamage, aes(x=damageSource, y=fatalities)) +
             geom_bar(stat = "identity") + 
-            geom_text(aes(label=fatalities), size=3, vjust=0.5, hjust=-1.0) +
+            geom_text(aes(label=fatalities), size=3, vjust=0.5, hjust=-1.0)+
             ggtitle("Fatalities") +
             scale_y_continuous(expand=c(0, 0), limits=c(0,maxFatalities)) + 
             coord_flip() +
@@ -317,7 +325,7 @@ gg.fatalities <- ggplot_gtable(ggplot_build(g.fatalities))
 gg.mid <- ggplot_gtable(ggplot_build(g.mid))
 grid.arrange(gg.injuries,gg.mid,gg.fatalities,
              ncol=3,widths=c(4/10,2/10,4/10),
-             main=paste("Aggregated human injuries & fatalities for weather events from ",cutOffYear," to ",endYear, sep=""))
+             top=paste("Aggregated human injuries & fatalities for weather events from ",cutOffYear," to ",endYear, sep=""))
 ```
 
 The underlying data
